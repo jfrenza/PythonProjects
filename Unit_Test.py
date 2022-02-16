@@ -14,3 +14,4 @@ class TestTimesTen(unittest.TestCase):
 #Run the Test
 
 unittest.main()
+print('hello word')
