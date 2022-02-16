@@ -7,7 +7,7 @@ def times_ten(number):
 
 # Our test class
 class TestTimesTen(unittest.TestCase):
-    # Atest method
+    # A test method
     def test_times_ten(self):
         for num in [0, 1000000, -10]:
             with self.subTest(self):
