@@ -1,25 +1,23 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # ## TV Shows and movies listed on Netflix
 
 # **This dataset consists of TV shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine.**
 
 # **Your task: Create a dashboard that will help the Marketing manager at Flixable understand the content available as of 2019. You are free to create it in a platform and format of your choosing, where you can answer the following questions.**
-# 
-# 
+#
+#
 # Has Netflix been increasingly focusing on TV rather than movies in recent years?
-# 
+#
 # What is the average length of movies?
-# 
+#
 # What is the most popular category per country?
-# 
+#
 # Have overall releases increased or decreased over time? Which year had more releases?
-# 
-# Who are the top five most famous actors in TV shows or movies in terms of number of casted movies or TV shows? 
-# 
+#
+# Who are the top five most famous actors in TV shows or movies in terms of number of casted movies or TV shows?
+#
 # Is there a connection between the rating and the category that the movie or TV show has been listed in?
-# 
+#
 
 # In[96]:
 
@@ -32,7 +30,7 @@ df = pd.read_csv('netflix_titles.csv')
 
 
 # **Firstly, the Pandas, Numpy and Matplotlib modules were imported; those will help to clean and analyse the data as well as create images that will help to understand its content and distribution**
-# 
+#
 # **Additionally, I've used the pandas tool read_csv to charge the dataset that was provided**
 
 # In[97]:
@@ -57,7 +55,7 @@ df['Year_added'] = df.Split_List.str.get(1)
 
 
 Movies = df[df.type == 'Movie']
-TV_shows = df[df.type == 'TV Show'] 
+TV_shows = df[df.type == 'TV Show']
 
 TV_shows_g = TV_shows.groupby(['Year_added'])['type'].count()
 
@@ -65,7 +63,7 @@ TV_shows_g['2009'] = 0
 TV_shows_g['2010'] = 0
 TV_shows_g['2011'] = 0
 TV_shows_g['2012'] = 0
-                              
+
 
 
 # In[507]:
@@ -74,7 +72,7 @@ TV_shows_g['2012'] = 0
 fig1,ax1 = plt.subplots(figsize = (14, 4), facecolor = 'white')
 
 plt.title('Movies Vs TV Shows over the years',
-         fontdict = {'fontsize': 15, 'color': 'black', 
+         fontdict = {'fontsize': 15, 'color': 'black',
                      'fontweight': 'bold'})
 
 Labels_Year = ['2008','2009','2010','2011',
@@ -211,4 +209,3 @@ rating_category.sort_values(by='show_id', ascending=False, ignore_index=True, in
 rating_category.columns=['Rating','Category','Count']
 
 rating_category.tail(20)
-
