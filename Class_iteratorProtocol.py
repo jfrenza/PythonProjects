@@ -1,4 +1,4 @@
-# Custom Iterator II - 
+# Custom Iterator II -
 
 class CustomerCounter:
   def __iter__(self):
@@ -18,3 +18,6 @@ customer_counter = CustomerCounter()
 
 for customer in customer_counter:
   print(customer)
+
+
+print('hello')
