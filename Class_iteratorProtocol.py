@@ -21,3 +21,5 @@ for customer in customer_counter:
 
 
 print('hello')
+print('heloo')
+print('hello')
