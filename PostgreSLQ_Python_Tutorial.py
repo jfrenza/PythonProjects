@@ -1,4 +1,5 @@
 import psycopg2
+import pandas as pd
 
 #Create a connection to the DB
 con = psycopg2.connect(
@@ -21,8 +22,10 @@ cur.execute('''
 rows = cur.fetchall()
 
 for r in rows:
-    print(r[1])
+    df = pd.DataFrame(r)
 # Close de cursor
 cur.close()
 #Close de connection
 con.close()
+
+print(df)
