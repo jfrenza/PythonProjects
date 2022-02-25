@@ -23,6 +23,7 @@ rows = cur.fetchall()
 
 for r in rows:
     df = pd.DataFrame(r)
+
 # Close de cursor
 cur.close()
 #Close de connection
