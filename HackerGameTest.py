@@ -3,7 +3,7 @@ from HackerGame import fizzBuzz
 
 # Test class
 
-class TestfizzBuzz(unittest.TestCase):
+class TestFizzBuzz(unittest.TestCase):
     def test_fizz_buzz_3(self):
         self.assertEqual(fizzBuzz(3), [1, 2, 'Fizz'],
                             "Expected HackerGame(3) to return [1, 2, 'Fizz']")
